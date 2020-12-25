@@ -6,10 +6,8 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# ca-housing-price-linear-regression-model
-
-
-
+node_modules
+node_modules/*
 
 # Zipped requirements from serverless-python-requirements
 .requirements.zip
