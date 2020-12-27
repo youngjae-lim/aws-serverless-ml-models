@@ -1,11 +1,10 @@
-require('dotenv').config()
-
 // Endpoint URL for California Housing price prediction regression model
 const housingEndpoint =
   'https://2jrdhrv6y1.execute-api.us-east-2.amazonaws.com/dev/get-price'
 
 // Endpoint URL for Named Entity Recognition
-const nerEndpoint = ''
+const nerEndpoint =
+  'https://ax4mtgh963.execute-api.us-east-2.amazonaws.com/dev/ner'
 
 // Endpoint URL for PoS tagging and dependency parsing
 const parseEndpoint = ''
@@ -362,9 +361,9 @@ function sendHousePredictionRequest() {
   $.ajax({
     type: 'GET',
     url: housingEndpoint,
-    headers: {
-      'x-api-key': process.env.AWS_LAMBDA_FREE_KEY_1,
-    },
+    // headers: {
+    //   'x-api-key': 'FJLMrcoNoO4YNd9QDHRoy6eHZ0ewlZIN3JnrYnSU',
+    // },
     data: {
       medInc: $('#medInc').val(),
       houseAge: $('#houseAge').val(),
